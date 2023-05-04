@@ -110,7 +110,7 @@ fun expression_examples() {
     let x = 0;
     let y = 0;
     takes_immut_returns_immut(&x); // no inference
-    takes_immut_returns_immut(&mut x); // inferred freeze(&mut x)
+    takes_mut_returns_immut(&mut x); // inferred freeze(&mut x)
     takes_mut_returns_immut(&mut x); // no inference
 
     assert!(&x == &mut y, 42); // inferred freeze(&mut y)
